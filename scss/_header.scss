@@ -1,0 +1,28 @@
+.header {
+    background-color: var(--color--primary);
+    color: var(--text-color-light);
+    
+    height: 25rem;
+    width: 100%;
+    padding: 3rem;
+
+    clip-path: ellipse(50% 60% at 50% -10%);
+    position: fixed;
+
+    animation: from-top 1s;
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 5rem;
+        font-weight: 300;
+        text-align: center;
+        letter-spacing: 2;
+    }
+}
+
+@keyframes from-top {
+    0% {
+        opacity: 0;
+        transform: translateY(-50rem);
+    }
+}

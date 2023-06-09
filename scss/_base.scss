@@ -1,4 +1,6 @@
 :root {
+    --bg-color: #aeb2bd;
+
     --color--primary: #28303b;
     --color--secondary: #e2a717;
 
@@ -13,10 +15,16 @@
 
 html {
     font-size: 62.5%;
+    font-family: var(--font-family);
+    letter-spacing: 1;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
 }
