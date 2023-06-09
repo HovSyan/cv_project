@@ -1,0 +1,9 @@
+{
+  "name": "cv-project",
+  "version": "1.0.0",
+  "description": "Resume in html/css/js",
+  "main": "index.html",
+  "scripts": {},
+  "author": "syanhovhannes@gmail.com",
+  "license": "ISC"
+}
