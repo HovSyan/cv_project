@@ -1,0 +1,22 @@
+:root {
+    --color--primary: #28303b;
+    --color--secondary: #e2a717;
+
+    --color--light-grey-1: #e6e9f0;
+    --color--light-grey-2: #cbced3;
+
+    --text-color-dark: #2a2f35;
+    --text-color-light: #dee4e9;
+
+    --font-family: 'Roboto', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
