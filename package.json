@@ -3,7 +3,15 @@
   "version": "1.0.0",
   "description": "Resume in html/css/js",
   "main": "index.html",
-  "scripts": {},
+  "scripts": {
+    "compile-sass": "node-sass ./scss/main.scss ./css/main.css --watch",
+    "live-server": "live-server",
+    "start": "concurrently --kill-others \"npm run compile-sass\" \"npm run live-server\""
+  },
   "author": "syanhovhannes@gmail.com",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "compile-sass": "^2.0.0",
+    "concurrently": "^8.1.0"
+  }
 }
