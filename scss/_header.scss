@@ -6,8 +6,9 @@
     width: 100%;
     padding: 3rem;
 
-    clip-path: ellipse(50% 60% at 50% -10%);
-    position: fixed;
+    clip-path: ellipse(51% 60% at 50% -10%);
+    position: absolute;
+    top: 0;
 
     animation: from-top 1s;
 

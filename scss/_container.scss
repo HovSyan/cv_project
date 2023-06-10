@@ -1,7 +1,8 @@
 .container {
-    width: 80%;
-    margin: auto;
-
     display: grid;
-    grid-template-columns: repeat(8, 1fr)
+    grid-template-columns: 1fr 3fr;
+
+    margin: 20rem 2rem;
+    border-radius: .3rem;
+    overflow: hidden;
 }

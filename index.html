@@ -4,15 +4,40 @@
         <link href="./css/main.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swapwght@300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
     </head>
     <body>
         <header class="header">
             <h1 class="header__title">Resume</h1>
         </header>
         <main class="container">
-            <div class="about">about</div>
-            <div class="experience">experience</div>
+            <div class="info">
+                <section class="info__image"></section>
+                <section class="info__contacts">
+                    <h2 class="info__section-title">Contacts</h2>
+                    <span class="info__title">Email</span>
+                    <span class="info__value">syanhovhannes@gmail.com</span>
+
+                    <span class="info__title">Phone</span>
+                    <span class="info__value">+374 95578587</span>
+
+                    <span class="info__title">Address</span>
+                    <span class="info__value">Babayan 22A, apt 1, Yerevan</span>
+                </section>
+                <section class="info__languages">
+                    <h2 class="info__section-title">Languages</h2>
+                    <label class="info__title" for="arm">Armenian</label>
+                    <div class="progress info__value" id="arm" value="100"><span>Native</span></div>
+                    <label class="info__title" for="rus">Russian</label>
+                    <div class="progress info__value" id="rus" value="90"><span>Advanced</span></div>
+                    <label class="info__title" for="file">English</label>
+                    <div class="progress info__value" id="file" value="90"><span>Advanced</span></div>
+                </section>
+                <section class="info__links">
+                    Links
+                </section>
+            </div>
+            <div class="resume">resume</div>
         </main>
     </body>
 </html>

@@ -1,0 +1,41 @@
+.info {
+    background-color: var(--color--primary);
+    color: var(--text-color-light);
+
+    font-size: 1.4rem;
+
+    padding: 2rem;
+
+    display: grid;
+    grid-gap: 5rem;
+
+    &__image {
+        aspect-ratio: 1;
+        border-radius: 100%;
+        overflow: hidden;
+        background-image: url(../assets/img/photo.jpeg);
+        background-size: cover;
+        box-shadow: 0 .3rem .8rem rgba(#000, .5);
+        filter: saturate(1.5);
+    }
+
+    &__section-title {
+        grid-column: 1 / -1;
+        color: var(--color--secondary);
+    }
+
+    &__contacts,
+    &__languages {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-row-gap: .5rem;
+    }
+
+    &__value {
+        justify-self: end;
+    }
+
+    &__title {
+        font-weight: 600;
+    }
+}

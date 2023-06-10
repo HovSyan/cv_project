@@ -1,0 +1,45 @@
+.progress {
+    width: 100%;
+    isolation: isolate;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        border-radius: inherit;
+        background-image: linear-gradient(90deg, var(--color--primary), var(--color--secondary));
+        text-align: right;
+        left: 0;
+    }
+
+    &[value="100"] {
+        & > span {
+            padding-right: 4rem;
+        }
+
+        &::before {
+            width: 100%;
+        }
+    }
+
+    &[value="90"] {
+        & > span {
+            padding-right: 4rem;
+        }
+
+        &::before {
+            width: 90%;
+        }
+    }
+
+    & > span {
+        text-align: right;
+        width: 100%;
+        display: block;
+    }
+}
