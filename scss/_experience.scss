@@ -1,0 +1,55 @@
+.experience {
+    display: grid;
+    grid-template-columns: [time-start] max-content 
+                           [time-end timeline-start] 20rem 
+                           [timeline-end desc-start] 1fr [desc-end];
+    grid-row-gap: 1rem;
+
+    &__years {
+        grid-column: time-start / time-end;
+        background-color: var(--color--primary);
+        color: var(--text-color-light);
+        font-size: 1.4rem;
+        text-align: center;
+        justify-self: center;
+        min-width: 16rem;
+
+        padding: 1rem 1.2rem;
+        border-radius: 5rem;
+    }
+
+    &__timeline {
+        grid-column: timeline-start / timeline-end;
+        background-color: blue;
+    }
+
+    &__description {
+        grid-column: desc-start / desc-end;
+        font-size: 1.4rem;
+
+        & > ul > li {
+            display: grid;
+            grid-template-columns: 1.4rem 1fr;
+            list-style: none;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                aspect-ratio: 1;
+                background-image: url(../assets/icons/icon-chevron-right.svg);
+                background-size: cover;
+
+                @supports(mask-image: url(../assets/icons/icon-chevron-right.svg)) {
+                    background-color: var(--color--secondary);
+                    mask-image: url(../assets/icons/icon-chevron-right.svg); 
+                    --webkit-mask-image: url(../assets/icons/icon-chevron-right.svg); 
+                    mask-size: cover;
+                    --webkit-mask-size: cover;
+                    background-size: cover;
+                    background-image: none;
+                }
+            }
+        }
+    }
+}
