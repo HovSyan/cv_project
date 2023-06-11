@@ -1,0 +1,7 @@
+.summary {
+    font-size: 1.6rem;
+
+    & > p:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}

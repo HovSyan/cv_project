@@ -4,7 +4,7 @@
   "description": "Resume in html/css/js",
   "main": "index.html",
   "scripts": {
-    "compile-sass": "node-sass ./scss/main.scss ./css/main.css --watch",
+    "compile-sass": "node-sass ./scss/main.scss ./css/main.css -w",
     "live-server": "live-server",
     "start": "concurrently --kill-others \"npm run compile-sass\" \"npm run live-server\""
   },

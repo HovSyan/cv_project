@@ -1,0 +1,13 @@
+.resume-heading {
+    border-bottom: .5rem double currentColor;
+    align-self: start;
+    justify-self: start;
+
+    & > *:first-child {
+        font-size: 1.2rem;
+    }
+
+    &__name {
+        font-size: 4rem;
+    }
+}
