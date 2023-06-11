@@ -20,7 +20,31 @@
 
     &__timeline {
         grid-column: timeline-start / timeline-end;
-        background-color: blue;
+        justify-self: center;
+        
+        width: 1px;
+        height: calc(100% + 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        background-color: var(--color--dark-grey-1);
+
+        & > span {
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            border: 2px solid var(--color--dark-grey-1);
+            border-radius: 100%;
+            aspect-ratio: 1;
+            background-color: var(--color--dark-grey-1);
+            transition: all .5s;
+
+            &:hover {
+                scale: 2;
+                background-color: var(--color--light-grey-1);
+            }
+        }
     }
 
     &__description {
