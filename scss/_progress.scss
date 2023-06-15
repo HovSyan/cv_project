@@ -4,6 +4,8 @@
     border-radius: 1rem;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 
     &::before {
         content: '';
