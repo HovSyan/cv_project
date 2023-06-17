@@ -13,3 +13,12 @@
         cursor: default;
     }
 }
+
+.dot {
+    display: inline-block;
+    width: .4rem;
+    height: .4rem;
+    vertical-align: middle;
+    background-color: var(--text-color-dark);
+    border-radius: 100%;
+}
