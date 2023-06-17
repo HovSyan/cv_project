@@ -1,0 +1,42 @@
+.references {
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    grid-column-gap: 2rem;
+}
+
+.ref-person {
+    display: grid;
+    grid-template-columns: 8rem auto;
+    grid-column-gap: .5rem;
+
+    &__photo {
+        border-radius: 10000px;
+        overflow: hidden;
+        width: fit-content;
+        grid-row: 1 / -1;
+        grid-column: 1 / 2;
+
+        & > img {
+            width: 8rem;
+            aspect-ratio: 1;
+        }
+    }
+
+    &__info {
+        display: flex;
+        gap: .2rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__name {
+        font-size: 1.3rem;
+        text-decoration: underline;
+        font-weight: 600;
+    }
+
+    &__role, &__mail {
+        font-size: 1.2rem;
+    }
+}
