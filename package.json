@@ -6,12 +6,14 @@
   "scripts": {
     "compile-sass": "node-sass ./scss/main.scss ./css/main.css -w",
     "live-server": "live-server",
-    "start": "concurrently --kill-others \"npm run compile-sass\" \"npm run live-server\""
+    "tsc-watch": "tsc --watch",
+    "start": "concurrently --kill-others \"npm run compile-sass\" \"npm run tsc-watch\" \"npm run live-server\""
   },
   "author": "syanhovhannes@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "compile-sass": "^2.0.0",
-    "concurrently": "^8.1.0"
+    "concurrently": "^8.1.0",
+    "typescript": "^5.1.6"
   }
 }
