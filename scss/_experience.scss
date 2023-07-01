@@ -53,7 +53,8 @@
                 background-color: var(--color--light-grey-1);
             }
 
-            &:hover + .timeline-card {
+            &:hover + .timeline-card,
+            & + .timeline-card:hover {
                 width: fit-content;
                 padding: 2rem;
                 overflow: visible;
@@ -91,7 +92,59 @@
     &__company-title {
         font-size: 1.7rem;
         text-decoration: underline;
-        margin: 1rem 0;
+        padding: 0.3rem .5rem;
+        width: fit-content;
+        position: relative;
+        isolation: isolate;
+        cursor: default;
+
+        & > a {
+            color: currentColor;
+
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        & > span {
+            height: 100%;
+            width: .5rem;
+            transform: scaleY(0);
+            transform-origin: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(90deg, var(--color--secondary), var(--color--light-grey-1));
+            z-index: -1;
+            transition: width .2s, 
+                        transform .2s .2s;
+            border-radius: 1px;
+        }
+
+        &:hover > a {
+            color: var(--color--primary);
+
+            & > .experience__company-logo {
+                opacity: 1;
+
+                transition: opacity .2s .2s;
+            }
+        }
+
+        &:hover > span {
+            width: 100%;
+            transform: scaleY(1);
+            transition: transform .2s,
+                        width .2s .2s;
+        }
+    }
+
+    &__company-logo {
+        width: 1.7rem;
+        height: 1.7rem;
+        opacity: 0;
+
+        transition: opacity .2s;
     }
 }
 
