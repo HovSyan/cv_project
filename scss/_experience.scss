@@ -73,7 +73,12 @@
         & > ul > li {
             display: grid;
             grid-template-columns: 1.4rem 1fr;
+            grid-gap: .4rem;
             list-style: none;
+
+            &:not(:last-child) {
+                margin-bottom: .4rem;
+            }
 
             &::before {
                 content: '';
@@ -150,7 +155,7 @@
 
 @keyframes pulsate {
     0% { scale: 1 }
-    50% { scale: 1.5; color: var(--color--dark-grey-2); }
+    50% { scale: 1.3; color: var(--color--dark-grey-2); }
     100% { scale: 1; }
 }
 
