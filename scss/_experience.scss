@@ -56,9 +56,7 @@
 
             &:hover + .timeline-card,
             & + .timeline-card:hover {
-                width: fit-content;
-                padding: 2rem;
-                overflow: visible;
+                transform: scale(1);
             }
         }
 
@@ -161,17 +159,50 @@
 }
 
 .timeline-card {
+    width: 35rem;
     position: absolute;
-    width: 0;
-    overflow: hidden;
-    height: 20rem;
+    z-index: 10000;
+    overflow: visible;
+    height: auto;
     left: 2rem;
-    padding: 0;
+    padding: 2rem;
+    transform: scale(0);
 
     background-color: var(--color--primary);
+    border-radius: 3px;
+    box-shadow: 0 2rem 4rem rgba(#000, .4);
+    text-align: center;
 
-    transform-origin: top left;
     transition: all .2s;
+    transform-origin: -2rem 2rem;
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        color: var(--text-color-light);
+    }
+
+    &__canvas-container {
+        position: relative;
+    }
+
+    &__icon-container {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        z-index: 2;
+
+        svg {
+            position: absolute;
+            width: 3rem;
+            height: 3rem;
+        }
+    }
 
     &::before {
         content: '';
@@ -186,5 +217,15 @@
         background-color: inherit;
 
         clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: -1.9rem;
+        top: 0;
+        width: 1.9rem;
+        height: 100%;
     }
 }
