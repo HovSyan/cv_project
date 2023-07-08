@@ -47,9 +47,14 @@
             margin-top: 1.5rem;
             cursor: pointer;
 
+            &.visited {
+                color: var(--color--dark-grey-1-2);
+            }
+
             &:hover,
             &:has(+ .timeline-card:hover) {
                 animation: none;
+                color: var(--color--dark-grey-1);
                 scale: 1.6;
                 background-color: var(--color--light-grey-1);
             }
