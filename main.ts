@@ -1,4 +1,4 @@
-import { generateChart } from "./ts/chart-generator";
+import { generateChart, Charts } from "./ts/chart-generator";
 
 window.onload = () => {
     addTimelineDotsListeners();
@@ -17,10 +17,15 @@ function addTimelineDotsListeners(): void {
 
 function initTimelineCard(cardContainer: HTMLDivElement): void {
     const innerCanvas = cardContainer.querySelector('canvas');
+    const id = innerCanvas?.id;
 
-    if(typeof innerCanvas?.id !== 'string') {
-        throw new Error('Canvas must have an id');
-    }
+    assertValidCanvas(id)
+    generateChart(id!);
+}
 
-    generateChart(innerCanvas?.id);
+function assertValidCanvas(id: unknown): asserts id is Charts {
+    if(id === 'superannotate-chart' ||
+    id === 'synergy-chart-1' ||
+    id === 'synergy-chart-2') return;
+    throw new Error('Invalid id for the cnavas')
 }

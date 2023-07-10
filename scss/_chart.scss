@@ -1,0 +1,23 @@
+.chart {
+    &__tooltip {
+        background-color: var(--color--light-grey-1);
+        border-radius: 3px;
+        color: var(--text-color-dark);
+        pointer-events: none;
+        position: absolute;
+        transform: translate(-50%, 0);
+        transition: all .1s;
+
+        &--invisible {
+            opacity: 0;
+        }
+    }
+
+    &__tooltip-content-container {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        font-size: 1.2rem;
+    }
+}
