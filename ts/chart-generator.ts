@@ -1,4 +1,4 @@
-import { ChartData, Chart, TooltipModel } from "chart.js/auto";
+import { ChartData, Chart, TooltipModel, ChartEvent } from "chart.js/auto";
 
 export type Charts = 
     | 'superannotate-chart'
@@ -124,7 +124,7 @@ function externalTooltipHandler(context: { chart: Chart; tooltip: TooltipModel<'
     const {offsetLeft: positionX, offsetTop: positionY} = chart.canvas;
   
     // Display, position, and set styles for font
-    tooltipEl.style.opacity = '1';
+    tooltipEl.classList.remove('chart__tooltip--invisible');
     tooltipEl.style.left = positionX + tooltip.caretX + 'px';
     tooltipEl.style.top = positionY + tooltip.caretY + 'px';
     tooltipEl.style.padding = tooltip.options.padding + 'px ' + tooltip.options.padding + 'px';
