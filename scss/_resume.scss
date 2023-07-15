@@ -17,5 +17,13 @@
         transform: translateX(-3rem);
         margin-bottom: 2rem;
         grid-column: 1 / -1;
+
+        @media only screen and (max-width: $md--medium){
+            transform: translateX(0);
+        }
+    }
+
+    @media only screen and (max-width: $md--medium){
+        border-radius: .3rem .3rem 0 0;
     }
 }

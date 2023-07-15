@@ -11,8 +11,8 @@
     }
 
     &--2 {
-        width: 30rem;
-        height: 30rem;
+        width: 20vw;
+        height: 20vw;
         bottom: -1rem;
         right: -1rem;
         z-index: 10;
@@ -22,6 +22,20 @@
                                             var(--color--primary) 100%);
         border-top-right-radius: 3rem;
         border-bottom-left-radius: 3rem;
-        // clip-path: polygon(100% 0, 100% 100%, 0 100%);
+        
+        @media only screen and (max-width: $md--medium){
+            top: -1rem;
+            background: linear-gradient(45deg, transparent 0,
+                                                transparent 50%,
+                                                var(--color--primary) 50%,
+                                                var(--color--primary) 100%);
+            border-radius: 0;
+            border-top-left-radius: 3rem;
+            border-bottom-right-radius: 3rem;
+        }
+
+        @media only screen and (max-width: $md--smallest){
+            display: none;
+        }
     }
 }

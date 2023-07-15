@@ -23,6 +23,10 @@
         background-size: cover;
         box-shadow: 0 .3rem .8rem rgba(#000, .5);
         filter: saturate(1.5);
+
+        @media only screen and (max-width: $md--medium){
+            display: none;
+        }
     }
 
     &__section-title {
@@ -60,5 +64,11 @@
         svg:hover {
             scale: 1.2;
         }
+    }
+
+    @media only screen and (max-width: $md--medium){
+        grid-row: 2 / span 1;
+        grid-gap: 2.5rem;
+        border-radius: 0 0 .3rem .3rem;
     }
 }

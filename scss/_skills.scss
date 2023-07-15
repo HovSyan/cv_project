@@ -27,7 +27,8 @@
     display: grid;
     grid-row-gap: .7rem;
     justify-items: center;
-    flex-grow: 1;
+    align-items: end;
+    flex: 0 0 min-content;
 
     &__title {
         text-align: center;
@@ -55,5 +56,9 @@
         &--filled {
             background-color: var(--color--dark-grey-1);
         }
+    }
+
+    @media only screen and (max-width: $md--medium--smaller) {
+        flex-basis: 20%;
     }
 }

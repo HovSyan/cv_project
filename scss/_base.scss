@@ -14,12 +14,30 @@
     --text-color-dark: #2a2f35;
     --text-color-light: #dee4e9;
 
-    --font-family: 'Schibsted Grotesk', sans-serif;;
+    --font-family: 'Schibsted Grotesk', sans-serif;
 }
+
+$md--large: 75em; // 1200px
+$md--medium: 56.25em; // 900px
+$md--medium--smaller: 50em; // 800px
+$md--small: 37.5em; // 600px
+$md--smallest: 31.25em; // 500px
 
 html {
     font-size: 62.5%;
     font-family: var(--font-family);
+
+    @media only screen and (max-width: $md--large) {
+        font-size: 56.25%;
+    }
+
+    @media only screen and (max-width: $md--small) {
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width: $md--smallest) {
+        font-size: 43.75%;
+    }
 }
 
 * {

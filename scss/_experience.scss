@@ -47,7 +47,7 @@
             margin-top: 1.5rem;
             cursor: pointer;
 
-            &.visited {
+            &.inactive {
                 color: var(--color--dark-grey-1-2);
             }
 
@@ -155,6 +155,12 @@
 
         transition: opacity .2s;
     }
+
+    @media only screen and (max-width: $md--medium--smaller) {
+        grid-template-columns: [time-start] max-content 
+                               [time-end timeline-start] 5rem 
+                               [timeline-end desc-start] 1fr [desc-end];
+    }
 }
 
 @keyframes pulsate {
@@ -232,5 +238,9 @@
         top: 0;
         width: 1.9rem;
         height: 100%;
+    }
+
+    @media only screen and (max-width: $md--smallest) {
+        width: 32rem;
     }
 }
