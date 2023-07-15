@@ -39,6 +39,7 @@
         width: 7.5rem;
         height: 7.5rem;
         fill: var(--color--secondary);
+        transition: transform .2s;
     }
 
     &__lvl-container {
@@ -58,7 +59,26 @@
         }
     }
 
+    &:hover &__icon {
+        transform: translateY(-5px);
+    }
+
+    &:hover &__lvl {
+        animation: wave .5s;
+        &:nth-of-type(1) { animation-delay: 0s;}
+        &:nth-of-type(2) { animation-delay: .05s;}
+        &:nth-of-type(3) { animation-delay: .1s;}
+        &:nth-of-type(4) { animation-delay: .15s;}
+        &:nth-of-type(5) { animation-delay: .2s;}
+    }
+
     @media only screen and (max-width: $md--medium--smaller) {
         flex-basis: 20%;
     }
+}
+
+@keyframes wave {
+    0% { transform: translateY(0);}
+    50% { transform: translateY(-10px);}
+    100% { transform: translateY(0);}
 }
