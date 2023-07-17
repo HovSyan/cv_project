@@ -36,7 +36,15 @@
                     <label class="info__title" for="file">English</label>
                     <div class="progress info__value" id="file" value="90"><span>Advanced</span></div>
                 </section>
-                <div class="info__divider"></div>
+                <div class="info__navigation">
+                    <nav>
+                        <a onclick="document.getElementById('summary').scrollIntoView({ behavior: 'smooth', block: 'center' })" class="info__navigation-item">Summary</a>
+                        <a onclick="document.getElementById('experience').scrollIntoView({ behavior: 'smooth', block: 'center' })" class="info__navigation-item">Experience</a>
+                        <a onclick="document.getElementById('skills').scrollIntoView({ behavior: 'smooth', block: 'center' })" class="info__navigation-item">Skills</a>
+                        <a onclick="document.getElementById('education').scrollIntoView({ behavior: 'smooth', block: 'center' })" class="info__navigation-item">Education</a>
+                        <a onclick="document.getElementById('certefications').scrollIntoView({ behavior: 'smooth', block: 'center' })" class="info__navigation-item">Certefications</a>
+                    </nav>
+                </div>
                 <section class="info__links">
                     <a href="https://linkedin.com/in/hovhannes-s-sahakyan" target="_blank"><svg><use xlink:href="./assets/icons/sprite.svg#icon-linkedin"></use></svg></a>
                     <a href="https://github.com/HovSyan" target="_blank"><svg><use xlink:href="./assets/icons/sprite.svg#icon-github"></use></svg></a>
@@ -49,7 +57,7 @@
                     <h2 class="resume-heading__name">Hovhannes Sahakyan</h2>
                 </section>
                 <section class="summary">
-                    <h3 class="resume__section-heading">Summary</h3>
+                    <h3 id="summary" class="resume__section-heading">Summary</h3>
                     <p>Software engineer, full stack developer with proven experience of web application development using front-end core
                         technologies (HTML5, CSS, JS, JSON, JQuery) and Angular framework, and back-end microservices technology written in
                         Java with Spring Boot framework.</p>
@@ -68,7 +76,7 @@
                     <p><u>Feel free</u> to let me know if there's anything else I can assist you with!</p>
                 </section>
                 <section class="experience">
-                    <h3 class="resume__section-heading">Experience</h3>
+                    <h3 id="experience" class="resume__section-heading">Experience</h3>
                     <span class="experience__years">2022 Dec - Now</span>
                     <div class="experience__timeline">
                         <span></span>
@@ -127,7 +135,7 @@
                     </div>
                     <div class="experience__description">
                         <h4 class="experience__company-title">
-                            <a href="https://www.superannotate.com/" target="_blank">
+                            <a href="https://www.synisys.com/" target="_blank">
                                 Synergy International Systems
                                 <img class="experience__company-logo" src="https://www.synisys.com/wp-content/uploads/2022/07/favikon.webp" alt="Synergy logo">
                             </a>
@@ -231,7 +239,7 @@
                     </div>
                 </section>
                 <section class="skills">
-                    <h3 class="resume__section-heading">Skills</h3>
+                    <h3 id="skills" class="resume__section-heading">Skills</h3>
                     <div class="technical-skills">
                         <div class="skill">
                             <span class="skill__title">HTML</span>
@@ -394,7 +402,7 @@
                     </div>
                 </section>
                 <section class="education">
-                    <h3 class="resume__section-heading">Education</h3>
+                    <h3 id="education" class="resume__section-heading">Education</h3>
                     <div class="education__container">
                         <h4 class="education__title">Bachelor degree in Informatics and Applied Mathematics</h4>
                         <span class="education__location">Yerevan State University <span class="dot"></span> Yerevan</span>
@@ -410,7 +418,7 @@
                         <span class="education__location">Synergy Summer School <span class="dot"></span> Yerevan</span>
                         <span class="education__years">09/2018</span>
                     </div>
-                    <h3 class="resume__section-heading">Certefications</h3>
+                    <h3 id="certefications" class="resume__section-heading">Certefications</h3>
                     <div class="education__container education__container--certefication">
                         <h4 class="education__title education__title--certefication">Advanced CSS and Sass course</h4>
                         <span class="education__location education__location--certefication">Udemy 

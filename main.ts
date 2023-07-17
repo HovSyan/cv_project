@@ -1,7 +1,9 @@
 import { generateChart, Charts } from "./ts/chart-generator";
+import { init as navigationInit } from "./ts/navigation-generator";
 
 window.onload = () => {
     addTimelineDotsListeners();
+    navigationInit();
 }
 
 function addTimelineDotsListeners(): void {
