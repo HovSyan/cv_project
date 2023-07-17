@@ -5,15 +5,15 @@ export function init(): void {
 }
 
 function onWindowScroll(): void {
-    const firstSectionTitle = document.querySelector<HTMLHeadingElement>('.resume h3');
+    const main = document.querySelector<HTMLHeadingElement>('main');
 
-    if(!firstSectionTitle) {
+    if(!main) {
         return;
     }
 
-    const elementRect = firstSectionTitle.getBoundingClientRect();
+    const elementRect = main.getBoundingClientRect();
 
-    if(elementRect.y < 0) {
+    if(elementRect.y < 100) {
         isVisible && toggleNavigation();
         isVisible = false;
     } else {
