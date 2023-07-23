@@ -1,6 +1,7 @@
 let isVisible: boolean = true;
 
 export function init(): void {
+    onWindowScroll();
     document.addEventListener('scroll', onWindowScroll)
 }
 
