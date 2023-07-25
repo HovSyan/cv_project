@@ -9,8 +9,9 @@
     "live-server": "live-server",
     "webpack-watch": "webpack --watch",
     "webpack-build": "webpack --node-env=production",
+    "create-dist": "rm -rf dist && mkdir dist && cp index.html dist/index.html && mkdir dist/assets && cp -R assets/* dist/assets/",
     "start": "concurrently --kill-others \"npm run compile-sass\" \"npm run webpack-watch\" \"npm run live-server\"",
-    "build": "rm -rf dist && mkdir dist && concurrently \"npm run build-sass\" \"npm run webpack-build\" \"cp index.html dist/index.html\""
+    "build": "npm run create-dist && concurrently \"npm run build-sass\" \"npm run webpack-build\""
   },
   "author": "syanhovhannes@gmail.com",
   "license": "ISC",
