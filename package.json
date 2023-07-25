@@ -5,9 +5,12 @@
   "main": "index.html",
   "scripts": {
     "compile-sass": "node-sass ./scss/main.scss ./css/main.css -w",
+    "build-sass": "node-sass ./scss/main.scss ./dist/css/main.css --output-style=compressed",
     "live-server": "live-server",
     "webpack-watch": "webpack --watch",
-    "start": "concurrently --kill-others \"npm run compile-sass\" \"npm run webpack-watch\" \"npm run live-server\""
+    "webpack-build": "webpack --node-env=production",
+    "start": "concurrently --kill-others \"npm run compile-sass\" \"npm run webpack-watch\" \"npm run live-server\"",
+    "build": "rm -rf dist && mkdir dist && concurrently \"npm run build-sass\" \"npm run webpack-build\" \"cp index.html dist/index.html\""
   },
   "author": "syanhovhannes@gmail.com",
   "license": "ISC",

@@ -3,7 +3,7 @@ const isProduction = process.env.NODE_ENV == 'production';
 const config = {
     entry: './main.ts',
     output: {
-        path: path.resolve(__dirname, 'js'),
+        path: isProduction ? path.resolve(__dirname, 'dist/js') : path.resolve(__dirname, 'js'),
     },
     plugins: [],
     module: {
