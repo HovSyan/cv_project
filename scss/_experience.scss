@@ -64,7 +64,8 @@
             }
 
             &:hover + .timeline-card,
-            & + .timeline-card:hover {
+            & + .timeline-card:hover,
+            &:focus {
                 transform: scale(1);
             }
         }
