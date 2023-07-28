@@ -18,6 +18,10 @@
 
         padding: 1rem 1.2rem;
         border-radius: 5rem;
+
+        @media only screen and (max-width: $md--small) {
+            display: none;
+        }
     }
 
     &__timeline {
@@ -68,6 +72,28 @@
         & > span:not(.visited) {
             animation: pulsate 4s infinite;
         }
+
+        @media only screen and (max-width: $md--small) {
+            &::before {
+                position: absolute;
+                color: var(--text-color-light);
+                top: 2rem;
+                left: -4rem;
+                font-size: 1rem;
+                width: max-content;
+                transform: rotate(-39deg);
+                transform-origin: left;
+                background-color: var(--color--primary);
+                padding: 2px 4px;
+                border-radius: 4px;
+            }
+
+            &[data-time="2022 Dec - Now"]::before { content: '2022 Dec - Now'; }
+            &[data-time="2022 Jul - 2022 Dec"]::before { content: '2022 Jul - 2022 Dec'; }
+            &[data-time="2020 Jul - 2022 Jul"]::before { content: '2020 Jul - 2022 Jul'; }
+            &[data-time="2018 Sep - 2020 Jul"]::before { content: '2018 Sep - 2020 Jul'; }
+            &[data-time="2016 May - 2017 Mar"]::before { content: '2016 May - 2017 Mar'; }   
+        }
     }
 
     &__description {
@@ -96,6 +122,7 @@
                 margin-top: 2px;
             }
         }
+
     }
 
     &__company-title {
@@ -146,6 +173,10 @@
             transition: transform .2s,
                         width .2s .2s;
         }
+
+        @media only screen and (max-width: $md--small) {
+            margin-top: .6rem;
+        }
     }
 
     &__company-logo {
@@ -159,6 +190,11 @@
     @media only screen and (max-width: $md--medium--smaller) {
         grid-template-columns: [time-start] max-content 
                                [time-end timeline-start] 5rem 
+                               [timeline-end desc-start] 1fr [desc-end];
+    }
+
+    @media only screen and (max-width: $md--small) {
+        grid-template-columns: [timeline-start] 5rem 
                                [timeline-end desc-start] 1fr [desc-end];
     }
 }
